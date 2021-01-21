@@ -52,54 +52,56 @@
 
 <body>
     
-    <!-- menu -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-      
-      Panaderia la Merced</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">
+   <!-- menu -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    
+    Panaderia la Merced</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="pedidos.php">
+          <i class='bx bx-home-alt'></i>
+          Inicio
+         
+        </a>
+        
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="contacto.php">
+          <i class='bx bxs-contact'></i>
+          Contacto
+         
+        </a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <i class='bx bx-menu' ></i>
+          Menú
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="pedidos.html">
             <i class='bx bx-home-alt'></i>
             Inicio
-           
           </a>
-          
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class='bx bxs-printer'></i>
-            Reporte
-           
+         
+          <a class="dropdown-item" href="contacto.php">
+            <i class='bx bxs-contact'></i>
+            Contacto
           </a>
-        </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class='bx bx-menu' ></i>
-            Menú
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">
-              <i class='bx bx-home-alt'></i>
-              Inicio
-            </a>
-            <a class="dropdown-item" href="#">
-              <i class='bx bxs-printer'></i>
-              Reporte
-            </a>
-
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
 
     <!-- tabla -->
     <div class="container">
