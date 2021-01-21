@@ -103,8 +103,8 @@
 
     <!-- tabla -->
     <div class="container">
-        <h2>Entregas</h2>
-        <h3>Fecha: {{}}</h3>
+        <h2 class="text-white" >Entregas</h2>
+        <h3 class="text-white">Fecha: </h3>
         <table class="table table-dark">
             <thead>
                 <tr>
@@ -128,7 +128,7 @@
                     <td><?php echo $fila['fecha_entrega']; ?></td>
                     <td>
                         <button class="btn btn-info">
-                            <i class='bx bx-check'></i>
+                        <i class='bx bx-info-circle'></i>
                         </button>
                     </td>
                     <td>
