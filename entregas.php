@@ -112,7 +112,7 @@
                     <th scope="col">Cliente</th>
                     <th scope="col">Tipo de Pastel</th>
                     <th scope="col">Personalizado</th>
-                    <th scope="col">Fecha de entrega</th>
+                    <th scope="col">Fecha y Hora de Entrega</th>
                     <th scope="col">Detalle</th>
                     <th scope="col">Hecho</th>
                 </tr>

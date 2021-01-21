@@ -98,9 +98,9 @@
 
 
       <form id="pedido" name="pedido" action="nuevo.php" method="POST" class="form-group col-md-6 ">
-        <center>
-          <h2 >Pedidos</h2>
-        </center>
+        
+          <h2 class="text-center">Pedidos</h2>
+        
         <div class="form-group">
           <!-- <input class="form-control text-light bg-dark" id="id" type="number" placeholder="Id del Pedido" readonly>
          -->
@@ -119,11 +119,14 @@
         </div>
 
         <div class="form-group">
-          <label class="text-white">Fecha de Pedido</label>
-          <input class="form-control text-light bg-dark" id="fecha_pedido" type="datetime-local" name="fecha_pedido" id="fecha_pedido" required>
+          <label class="text-white">Fecha y Hora de Pedido</label>
+          
+         <!-- <input class="form-control text-light bg-dark" id="fecha_pedido" type="datetime-local" name="fecha_pedido" id="fecha_pedido"  required> -->
+        <?php echo "<input class='form-control text-light bg-dark' id='fecha_pedido' type='text' name='fecha_pedido' id='fecha_pedido' readonly value='".date("d/m/Y")." ".date("G:i")."'"; ?>
+         
         </div>
         <div class="form-group">
-          <label class="text-white">Fecha de Entrega</label>
+          <label class="text-white">Fecha y Hora de Entrega</label>
           <input class="form-control text-light bg-dark" id="fecha_entrega" type="datetime-local" name="fecha_entrega" id="fecha_entrega" required>
         </div>
         <div class="form-group">
@@ -150,13 +153,14 @@
         <div class="row">
           <div class="form-group col-md-6">
             <button type="submit" class="btn btn-success btn-block ">
-              <i class='bx bxs-send'></i>
+              <i class='bx bxs-send bx-sm'></i>
             </button>
           </div>
 
           <div class="form-group col-md-6">
             <button type="reset" class="btn btn-danger btn-block ">
-              Cancelar
+              
+            <i class='bx bxs-x-square bx-sm'></i>
             </button>
           </div>
         </div>
