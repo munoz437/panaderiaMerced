@@ -2,8 +2,8 @@
 	
 	require 'conexion.php';
 	
-	$sql = "SELECT p.ID, p.nombre, p.apellido, p.fecha_entrega, p.personalizar, pa.nombre as nombre_pastel 
-  from pedido as p inner join pastel as pa where p.tipo_pastel = pa.id ;";
+	$sql = "SELECT p.ID,p.Estado, p.nombre, p.apellido, p.fecha_entrega, p.personalizar, pa.nombre as nombre_pastel 
+  from pedido as p inner join pastel as pa where p.tipo_pastel = pa.id order by p.fecha_entrega;";
   $resultado = $mysqli->query($sql);
   
 ?>
@@ -105,8 +105,8 @@
 
     <!-- tabla -->
     <div class="container">
-        <h2 class="text-white" >Entregas</h2>
-        <h3 class="text-white">Fecha: </h3>
+        <h2 class="text-white text-center" >Entregas</h2>
+      
         <table class="table table-dark">
             <thead>
                 <tr>
@@ -122,6 +122,8 @@
 
             <tbody>
               <?php while($fila = $resultado->fetch_assoc()) { ?>
+                <?php if($fila['Estado']==0) { ?>
+              
                 <tr>
                     <th scope="row"><?php echo $fila['ID']; ?></th>
                     <td><?php echo $fila['nombre']; ?></td>
@@ -134,13 +136,15 @@
                         </button>
                     </td>
                     <td>
-                        <button class="btn btn-success">
-                            <i class='bx bx-check'></i>
-                        </button>
+                        <a href="editar.php?id=<?php echo $fila['ID'] ?>" class="btn btn-success">
+                        <i class='bx bx-check'></i>
+                        </a>
                     </td>
                 </tr>
                 </td>
                 </tr>
+
+                <?php }//end if ?>
               <?php } ?>               
             </tbody>
         </table>
