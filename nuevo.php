@@ -161,6 +161,8 @@
         <div class="form-group">
           <label >Personalizado</label>
 		  <?php echo "<input class='form-control text-light bg-dark'  type='text' readonly value='".$personalizar."'>"; ?>
+      
+      
         </div>
 
         
