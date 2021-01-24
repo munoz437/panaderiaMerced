@@ -135,12 +135,13 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
                         <button class="btn btn-warning">
                         <i class='bx bxs-edit'></i>
                         </button>
-                        <button class="btn btn-danger text-dark">
+
+                        <a href="eliminar.php?ID=<?php echo $fila['ID']; ?>" class="btn btn-danger text-dark">
                         <i class='bx bxs-trash-alt'></i>
-                        </button>
+                        </a>
                     </td>
                     <td>
-                        <a href="editar.php?id=<?php echo $fila['ID'] ?>" class="btn btn-success">
+                        <a href="editar.php?ID=<?php echo $fila['ID'] ?>" class="btn btn-success">
                         <i class='bx bx-check'></i>
                         </a>
                     </td>
