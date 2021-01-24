@@ -24,13 +24,9 @@
 
   <style>
     body {
-      background: #DC2424;
-      /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #4A569D, #DC2424);
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #4A569D, #DC2424);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+      background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     }
 
@@ -94,24 +90,21 @@
 </nav>
 
   <!-- formulario -->
-  <div class="container-fluid">
+  
 
-    <div class="row justify-content-center">
+  <div class="container mt-6 col-md-6">
+              <div class="card border-secondary bg-dark">
+                <!-- <div class="card-header"> -->
+                  <h2 class="text-white text-center">Pedidos</h2>
+                <!-- </div> -->
+                <div class="card body bg-dark ">
+                  <form action="">
 
 
-      <form id="pedido" name="pedido" action="nuevo.php" method="POST" class="form-group col-md-6 ">
-        
-          <h2 class="text-center">Pedidos</h2>
-        
-        <div class="form-group">
-          <!-- <input class="form-control text-light bg-dark" id="id" type="number" placeholder="Id del Pedido" readonly>
-         -->
-         </div>
-      
-        <div class="row">
+                  <div class="row">
           <div class="form-group col-md-6">
             <label class="text-white">Nombres Del Cliente</label>
-            <input class="form-control text-light bg-dark" id="nombre" name="nombre" type="text" placeholder="Nombres" required>
+            <input class="form-control text-dark bg-dark" id="nombre" name="nombre" type="text" placeholder="Nombres" required>
           </div>
 
           <div class="form-group col-md-6">
@@ -167,18 +160,12 @@
             <i class='bx bxs-x-square bx-sm'></i>
             </button>
           </div>
-        </div>
-        
-        
 
 
-
-      </form>
-    </div>
-
-
-
-
+                  
+                  </form>
+                </div>
+              </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

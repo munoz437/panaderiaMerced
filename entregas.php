@@ -3,7 +3,7 @@
 	require 'conexion.php';
 	
 	$sql = "SELECT p.ID,p.Estado, p.nombre, p.apellido, p.fecha_entrega, p.personalizar, pa.nombre as nombre_pastel 
-  from pedido as p inner join pastel as pa where p.tipo_pastel = pa.id order by p.fecha_entrega;";
+  from pedido as p inner join pastel as pa where p.tipo_pastel = pa.id order by p.ID;";
   $resultado = $mysqli->query($sql);
   
 ?>
@@ -36,13 +36,10 @@
 
     <style>
         body {
-            height: 100vh;
-            background: #DC2424;
-            /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #4A569D, #DC2424);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #4A569D, #DC2424);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 
         }
@@ -104,10 +101,10 @@
 </nav>
 
     <!-- tabla -->
-    <div class="container">
+    <div class="container table-responsive">
         <h2 class="text-white text-center" >Entregas</h2>
       
-        <table class="table table-dark">
+        <table class="table table-dark text-center table-bordered table-striped">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -115,8 +112,8 @@
                     <th scope="col">Tipo de Pastel</th>
                     <th scope="col">Personalizado</th>
                     <th scope="col">Fecha y Hora de Entrega</th>
-                    <th scope="col">Detalle</th>
-                    <th scope="col">Hecho</th>
+                    <th scope="col">Operaciones</th>
+                    <th scope="col">Estado</th>
                 </tr>
             </thead>
 
@@ -131,8 +128,15 @@
                     <td><?php echo $fila['personalizar']; ?></td>
                     <td><?php echo $fila['fecha_entrega']; ?></td>
                     <td>
-                        <button class="btn btn-info">
-                        <i class='bx bx-info-circle'></i>
+                        <button class="btn btn-info text-dark">
+                          <i class='bx bx-printer'></i>
+                        </button>
+                        
+                        <button class="btn btn-warning">
+                        <i class='bx bxs-edit'></i>
+                        </button>
+                        <button class="btn btn-danger text-dark">
+                        <i class='bx bxs-trash-alt'></i>
                         </button>
                     </td>
                     <td>
